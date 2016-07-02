@@ -1,0 +1,27 @@
+﻿@using GraysPortableWelding.Models
+@model GraysPortableWelding.ViewModels.ServicesViewModel
+
+<div>
+    <h4>ServicesViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal"></dl>
+</div>
+<ul>
+    @foreach (Service service in Model.Services)
+    {
+        <li>
+            <ul>
+                <li>@service.Name</li>
+                <li>@service.Price</li>
+                <li>@service.Description</li>
+            </ul>
+        </li>
+
+    }
+    Total Price: @Model.TotalPrice;
+</ul>
+@Newtonsoft.Json.JsonConvert.SerializeObject(Model)
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
