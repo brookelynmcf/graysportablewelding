@@ -22,3 +22,21 @@ select,
 textarea {
     max-width: 280px;
 }
+
+body {
+    font-family: bebasregular;
+    word-spacing: 3px;
+}
+
+.navbar-inverse {
+    background-color: rgb(102,153,154);
+    border-style: none;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #000;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+    color: #000;
+}
